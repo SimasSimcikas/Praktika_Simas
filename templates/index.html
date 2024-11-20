@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Akademinė Sistema</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prisijungimas prie Akademinės Sistemos</h1>
+        <form action="/redirect" method="post">
+            <label for="role">Pasirinkite savo rolę:</label>
+            <select name="role" id="role">
+                <option value="Administratorius">Administratorius</option>
+                <option value="Dėstytojas">Dėstytojas</option>
+                <option value="Studentas">Studentas</option>
+            </select>
+            <button type="submit">Pasirinkti</button>
+        </form>
+    </div>
+</body>
+</html>

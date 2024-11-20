@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administratoriaus Valdymo Panelė</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_valdymas.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Administratoriaus Valdymo Panelė</h1>
+        <form action="/add_student" method="post">
+            <h2>Pridėti Naują Studentą</h2>
+            <label for="vardas">Vardas:</label>
+            <input type="text" id="vardas" name="vardas" required>
+
+            <label for="pavarde">Pavardė:</label>
+            <input type="text" id="pavarde" name="pavarde" required>
+
+            <label for="prisijungimo_vardas">Prisijungimo Vardas:</label>
+            <input type="text" id="prisijungimo_vardas" name="prisijungimo_vardas" required>
+
+            <label for="slaptazodis">Slaptažodis:</label>
+            <input type="text" id="slaptazodis" name="slaptazodis" required>
+
+            <button type="submit">Pridėti Studentą</button>
+        </form>
+        <button class="back_button" onclick="window.location.href='/'">Sugrįžti atgal</button>
+    </div>
+</body>
+</html>

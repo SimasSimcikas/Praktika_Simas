@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dėstytojo Prisijungimas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='destytojas_login.css') }}">
+</head>
+<body>
+    <h1>Dėstytojo Prisijungimas</h1>
+    <form action="/destytojas_login" method="post">
+        <label for="vardas">Vardas:</label>
+        <input type="text" id="vardas" name="vardas" required>
+        <br><br>
+        <label for="slaptazodis">Slaptažodis:</label>
+        <input type="password" id="slaptazodis" name="slaptazodis" required>
+        <br><br>
+        <button type="submit">Prisijungti</button>
+    </form>
+    
+    <button class="atgal"onclick="window.location.href='/'">Atgal</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sveiki, Dėstytojau!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='destytojas.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sveiki, Dėstytojau!</h1>
+        <h2>Studentai ir jų pažymiai:</h2>
+        <form action="/pazymio_update" method="post">
+            <label for="studentas_id">Pasirinkite studentą:</label>
+            <select id="studentas_id" name="studentas_id">
+                {% for studentas in studentai %}
+                <option value="{{ studentas[0] }}">{{ studentas[1] }} {{ studentas[2] }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="dalykas_id">Pasirinkite dalyką:</label>
+            <select id="dalykas_id" name="dalykas_id">
+                {% for dalykas in dalykai %}
+                <option value="{{ dalykas[0] }}">{{ dalykas[1] }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="pazymys">Įveskite pažymį:</label>
+            <input type="number" id="pazymys" name="pazymys" step="1" required>
+
+            <button type="submit">Atnaujinti pažymį</button>
+            <button onclick="window.location.href='/'">Atgal</button>
+        </form>
+    </div>
+</body>
+
+</html>

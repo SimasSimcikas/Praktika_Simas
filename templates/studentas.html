@@ -1,0 +1,96 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Studentas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='studentas.css') }}">
+</head>
+<body>
+    <h1>Sveiki, {{ vardas }}</h1>
+    <p>Čia galite peržiūrėti savo pažymius ir informaciją.</p>
+     <h1>Studento Pažymiai</h1>
+    <table class="grades-table">
+        <thead>
+            <tr>
+                <th>Dalyko/modulio kodas ir pavadinimas</th>
+                <th>Pažymys</th>
+                <th>Dėstomoji kalba</th>
+                <th>Kreditų sk.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>P000B217 Daugiagijis programavimas</td>
+                <td>10</td>
+                <td>L</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>P175B018 Saityno paslaugos</td>
+                <td>10</td>
+                <td>L</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>P175B030 Informacijos saugumas</td>
+                <td>10</td>
+                <td>L</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>T120B043 Verslo valdymo sistemos</td>
+                <td>10</td>
+                <td>L</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>T120B103 Kompiuteriai ir jų tinklai</td>
+                <td>10</td>
+                <td>L</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>S210B032 Sociologija</td>
+                <td>10</td>
+                <td>L</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>P000B012 Duomenų bazių praktika</td>
+                <td>10</td>
+                <td>L</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" onclick="window.location.href='/'">Sugrįžti atgal</button>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Studentas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='studentas.css') }}">
+</head>
+<body>
+    <h1>Sveiki, {{ vardas }}</h1>
+    <p>Čia galite peržiūrėti savo pažymius ir informaciją.</p>
+    <h2>Studento Pažymiai</h2>
+    <table class="grades-table">
+        <thead>
+            <tr>
+                <th>Dalyko/modulio kodas ir pavadinimas</th>
+                <th>Pažymys</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dalykas, pazymys in pazymiai %}
+            <tr>
+                <td>{{ dalykas }}</td>
+                <td>{{ pazymys |int}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="button" onclick="window.location.href='/'">Sugrįžti atgal</button>
+</body>
+</html>

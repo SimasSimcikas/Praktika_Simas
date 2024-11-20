@@ -1,0 +1,42 @@
+body {
+    background-color: #e2f0d9;
+    color: #155724;
+}
+h1 {
+    color: #28a745;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #e0ecff;
+}
+
+.grades-table thead th {
+    background-color: #fffacd;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.grades-table tbody td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.grades-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+button {
+    display: flex;
+    margin-top: 50px;
+    border: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}

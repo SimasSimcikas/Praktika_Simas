@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administratorius Prisijungimas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+</head>
+<body>
+    <h1>Administratorius Prisijungimas</h1>
+    <form action="/admin_login" method="post">
+        <label for="vardas">Prisijungimo Vardas:</label>
+        <input type="text" id="vardas" name="vardas" required>
+        <br><br>
+        <label for="slaptazodis">Slaptažodis:</label>
+        <input type="password" id="slaptazodis" name="slaptazodis" required>
+        <br><br>
+        <button type="submit">Prisijungti</button>
+    </form>
+    <button class="back_button " onclick="window.location.href='/'">Atgal</button>
+</body>
+</html>
